@@ -5,6 +5,7 @@ import MemberInput from './components/MemberInput'
 import VehicleInput from './components/VehicleInput'
 import VehicleListingInput from './components/VehicleListingInput'
 import OfferInput from './components/OfferInput'
+import CloseBidding from './components/CloseBidding'
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       <VehicleInput />
       <VehicleListingInput />
       <OfferInput />
+      <CloseBidding />
     </div>
   );
 }
