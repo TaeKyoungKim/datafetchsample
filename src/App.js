@@ -4,7 +4,7 @@ import './App.css';
 import MemberInput from './components/MemberInput'
 import VehicleInput from './components/VehicleInput'
 import VehicleListingInput from './components/VehicleListingInput'
-
+import OfferInput from './components/OfferInput'
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
       <MemberInput />
       <VehicleInput />
       <VehicleListingInput />
+      <OfferInput />
     </div>
   );
 }

@@ -34,7 +34,7 @@ class MemberInput extends Component {
         firstName:this.state.firstName,
         lastName :this.state.lastName
       }
-      fetch('http://localhost:3000/api/Member' ,{
+      fetch('http://localhost:3001/api/Member' ,{
         method :'POST',
         headers : {
            'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ class MemberInput extends Component {
   }
   
  getMember = ()=>{
-   fetch('http://localhost:3000/api/Member')
+   fetch('http://localhost:3001/api/Member')
    .then(res=>res.json())
    .then(resData =>{console.log(resData)})
  }
@@ -57,7 +57,7 @@ class MemberInput extends Component {
       <form onSubmit={this._onSubmit}>
         <input
           placeholder="$class"
-          value={this.state.$class}
+          value={"org.acme.vehicle.auction.Member"}
           onChange={this.handleChange}
           name="$class"
         />

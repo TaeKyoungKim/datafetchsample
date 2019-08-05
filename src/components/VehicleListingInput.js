@@ -43,7 +43,7 @@ class MemberInput extends Component {
         state:'FOR_SALE',
         vehicle:'resource:org.acme.vehicle.auction.Vehicle#'+this.state.vehicle
       }
-      fetch('http://localhost:3000/api/VehicleListing' ,{
+      fetch('http://localhost:3001/api/VehicleListing' ,{
         method :'POST',
         headers : {
            'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ class MemberInput extends Component {
   }
   
   getVehicle = ()=>{
-    fetch('http://localhost:3000/api/VehicleListing')
+    fetch('http://localhost:3001/api/VehicleListing')
     .then(res=>res.json())
     .then(resData =>{
        
@@ -67,11 +67,11 @@ class MemberInput extends Component {
   render() {
     return (
         <div>
-        <p> 자동차 추가 </p>
+        <p> 경매리스트 추가 </p>
       <form onSubmit={this._onSubmit}>
         <input
           placeholder="org.acme.vehicle.auction.VehicleListing"
-          value={this.state.$class}
+          value={"org.acme.vehicle.auction.VehicleListing"}
           onChange={this.handleChange}
           name="$class"
         />
