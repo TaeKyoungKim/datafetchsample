@@ -32,7 +32,7 @@ class MemberInput extends Component {
         vin: this.state.vin,
         owner:'resource:org.acme.vehicle.auction.Member#'+this.state.owner
       }
-      fetch('http://localhost:3001/api/Vehicle' ,{
+      fetch('http://13.124.6.135:3000/api/Vehicle' ,{
         method :'POST',
         headers : {
            'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ class MemberInput extends Component {
   }
   
   getVehicle = ()=>{
-    fetch('http://localhost:3001/api/Vehicle')
+    fetch('http://13.124.6.135:3000/api/Vehicle')
     .then(res=>res.json())
     .then(resData =>{console.log(resData)})
   }

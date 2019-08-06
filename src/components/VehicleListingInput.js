@@ -43,7 +43,7 @@ class MemberInput extends Component {
         state:'FOR_SALE',
         vehicle:'resource:org.acme.vehicle.auction.Vehicle#'+this.state.vehicle
       }
-      fetch('http://localhost:3001/api/VehicleListing' ,{
+      fetch('http://13.124.6.135:3000/api/VehicleListing?filter={"include":"resolve"}' ,{
         method :'POST',
         headers : {
            'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ class MemberInput extends Component {
   }
   
   getVehicle = ()=>{
-    fetch('http://localhost:3001/api/VehicleListing')
+    fetch('http://13.124.6.135:3000/api/VehicleListing?filter={"include":"resolve"}')
     .then(res=>res.json())
     .then(resData =>{
        

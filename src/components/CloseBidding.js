@@ -33,7 +33,7 @@
           
           
         }
-        fetch('http://localhost:3001/api/CloseBidding' ,{
+        fetch('http://13.124.6.135:3000/api/CloseBidding' ,{
           method :'POST',
           headers : {
              'Content-Type': 'application/json',
@@ -48,7 +48,7 @@
     }
     
     getCloseBidding = ()=>{
-      fetch('http://localhost:3001/api/CloseBidding')
+      fetch('http://13.124.6.135:3000/api/CloseBidding')
       .then(res=>res.json())
       .then(resData =>{
          

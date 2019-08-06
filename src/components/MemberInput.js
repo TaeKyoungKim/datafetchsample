@@ -34,7 +34,7 @@ class MemberInput extends Component {
         firstName:this.state.firstName,
         lastName :this.state.lastName
       }
-      fetch('http://localhost:3001/api/Member' ,{
+      fetch('http://13.124.6.135:3000/api/Member' ,{
         method :'POST',
         headers : {
            'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ class MemberInput extends Component {
   }
   
  getMember = ()=>{
-   fetch('http://localhost:3001/api/Member')
+   fetch('http://13.124.6.135:3000/api/Member')
    .then(res=>res.json())
    .then(resData =>{console.log(resData)})
  }

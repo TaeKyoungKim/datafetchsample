@@ -36,7 +36,7 @@ class OfferInput extends Component {
         member:"resource:org.acme.vehicle.auction.Member#"+this.state.member
         
       }
-      fetch('http://localhost:3001/api/Offer' ,{
+      fetch('http://13.124.6.135:3000/api/Offer' ,{
         method :'POST',
         headers : {
            'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ class OfferInput extends Component {
   }
   
   getVehicle = ()=>{
-    fetch('http://localhost:3001/api/Offer')
+    fetch('http://13.124.6.135:3000/api/Offer')
     .then(res=>res.json())
     .then(resData =>{
        
